@@ -16,12 +16,24 @@ const Footer = () => {
           <a href="https://www.instagram.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition duration-300">
             <FaInstagram />
           </a>
-          <a href="https://www.linkedin.com/in/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition duration-300">
-            <FaLinkedin />
-          </a>
-          <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition duration-300">
-            <FaGithub />
-          </a>
+          <div className="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/himanshu-singh-05a474285"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
+            >
+              <FaLinkedin className="text-2xl" />
+            </a>
+            <a
+              href="https://github.com/Himanshu250625"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
+            >
+              <FaGithub className="text-2xl" />
+            </a>
+          </div>
           <a href="https://www.facebook.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition duration-300">
             <FaFacebook />
           </a>

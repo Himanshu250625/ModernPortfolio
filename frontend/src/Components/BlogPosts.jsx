@@ -7,46 +7,34 @@ const BlogPosts = () => {
   const recentPosts = blogPosts.slice(0, 3); // Get the 3 most recent posts
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16 bg-base-200">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">Latest Blog Posts</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-base-content">Latest Blog Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post) => (
-            <div key={post.id} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+            <div key={post.id} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
               {post.image && (
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-48 object-cover"
-                />
+                <figure>
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-48 object-cover"
+                  />
+                </figure>
               )}
-              <div className="p-6">
+              <div className="card-body">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="px-2 py-1 bg-blue-900 text-blue-200 text-sm rounded">
-                    {post.category}
-                  </span>
-                  <span className="text-gray-400 text-sm">
-                    {post.readTime}
-                  </span>
+                  <span className="badge badge-primary">{post.category}</span>
+                  <span className="text-sm text-base-content/70">{post.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold mt-2 mb-3 text-white">{post.title}</h3>
-                <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags?.map(tag => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-gray-700 text-gray-300 text-sm rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <h3 className="card-title text-base-content">{post.title}</h3>
+                <p className="text-base-content/80 line-clamp-2">{post.excerpt}</p>
+                <div className="card-actions justify-between items-center mt-4">
+                  <span className="text-sm text-base-content/70">{post.date}</span>
+                  <Link to={`/blog/${post.id}`} className="btn btn-primary btn-sm">
+                    Read More
+                  </Link>
                 </div>
-                <Link 
-                  to={`/blog/${post.id}`}
-                  className="inline-block text-blue-400 font-semibold hover:text-blue-300 transition-colors duration-300"
-                >
-                  Read More →
-                </Link>
               </div>
             </div>
           ))}

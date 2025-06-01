@@ -38,7 +38,7 @@ const ProjectsHome = () => {
   }, []);
 
   return (
-    <div className="py-16 px-6 bg-base-100">
+    <div className="py-16 px-6 bg-base-200">
       <h2
         className="text-4xl text-center font-bold mb-12 text-primary font-serif"
         data-aos="fade-up"
@@ -70,7 +70,11 @@ const ProjectsHome = () => {
               </h3>
               <p className="text-gray-600 mt-2">{project.desc}</p>
               <div className="flex justify-end mt-4">
-               <a href={project.demo}> <button className="btn btn-outline btn-primary">View</button></a>
+               <a href={project.demo}> 
+                 <button className="btn bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-32 hover:scale-105 transition-all text-white">
+                   View
+                 </button>
+               </a>
               </div>
             </div>
           </div>

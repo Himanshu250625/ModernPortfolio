@@ -132,62 +132,82 @@ const AboutUs = () => {
         <h2 className="text-3xl font-bold text-primary text-center font-serif mb-10">
           Journey
         </h2>
-        <ul className="timeline timeline-vertical">
+        <ul className="timeline timeline-vertical lg:timeline-horizontal w-full max-w-6xl mx-auto">
           <li>
-            <div className="timeline-start timeline-box">
-              Completion of High School (2016-2017)
+            <div className="timeline-start md:text-end mb-10 md:mb-0">
+              <div className="timeline-box hover:bg-base-300 transition-colors duration-300 p-4 rounded-lg shadow-md">
+                Completion of High School
+                <span className="block text-sm text-base-content/80">2016-2017</span>
+              </div>
             </div>
             <div className="timeline-middle text-primary">
-              <i className="fa-solid fa-graduation-cap"></i>
+              <i className="fa-solid fa-graduation-cap text-2xl"></i>
             </div>
-            <hr />
+            <hr className="bg-primary" />
           </li>
           <li>
-            <div className="timeline-start timeline-box">
-              Completion of Intermediate (2018-2019)
+            <hr className="bg-primary" />
+            <div className="timeline-start md:text-end mb-10 md:mb-0">
+               <div className="timeline-box hover:bg-base-300 transition-colors duration-300 p-4 rounded-lg shadow-md">
+                Completion of Intermediate
+                 <span className="block text-sm text-base-content/80">2018-2019</span>
+               </div>
             </div>
             <div className="timeline-middle text-primary">
-              <i className="fa-solid fa-graduation-cap"></i>
+              <i className="fa-solid fa-graduation-cap text-2xl"></i>
             </div>
-            <hr />
+            <hr className="bg-primary" />
           </li>
           <li>
-            <hr />
+            <hr className="bg-secondary" />
             <div className="timeline-middle text-secondary">
-              <i className="fa-solid fa-code"></i>
+              <i className="fa-solid fa-code text-2xl"></i>
             </div>
-            <div className="timeline-end timeline-box">
-              {" "}
-              Btech in CSE at MMMUT Started in 2021
+            <div className="timeline-end mb-10 md:mb-0">
+              <div className="timeline-box hover:bg-base-300 transition-colors duration-300 p-4 rounded-lg shadow-md">
+                Btech in CSE at MMMUT
+                <span className="block text-sm text-base-content/80">Started in 2021</span>
+              </div>
             </div>
+            <hr className="bg-secondary"/>
           </li>
           <li>
-            <hr />
-            <div className="timeline-start text-secondary">
-              <i className="fa-solid fa-code"></i>
+            <hr className="bg-secondary"/>
+            <div className="timeline-start md:text-end mb-10 md:mb-0">
+              <div className="timeline-box hover:bg-base-300 transition-colors duration-300 p-4 rounded-lg shadow-md">
+                Built Projects with MERN
+                <span className="block text-sm text-base-content/80">2023-2024</span>
+              </div>
             </div>
-            <div className="timeline-end timeline-box">
-              Built Projects with MERN (2023-2024)
+            <div className="timeline-middle text-secondary">
+              <i className="fa-solid fa-code text-2xl"></i>
             </div>
+            <hr className="bg-secondary"/>
           </li>
           <li>
-            <hr />
-            <div className="timeline-start text-secondary">
-              <i className="fa-solid fa-code"></i>
+             <hr className="bg-secondary"/>
+            <div className="timeline-start md:text-end mb-10 md:mb-0">
+              <div className="timeline-box hover:bg-base-300 transition-colors duration-300 p-4 rounded-lg shadow-md">
+                Internship at Brainlox
+                 <span className="block text-sm text-base-content/80">Full Stack Development</span>
+              </div>
             </div>
-            <div className="timeline-end timeline-box">
-              Done internship at Brainlox in full stack development
+            <div className="timeline-middle text-secondary">
+              <i className="fa-solid fa-code text-2xl"></i>
             </div>
+            <hr className="bg-accent"/>
           </li>
           <li>
-            <hr />
-            <div className="timeline-start timeline-box">
-              Completed my Btech journey in 2025
+             <hr className="bg-accent"/>
+            <div className="timeline-start md:text-end mb-10 md:mb-0">
+              <div className="timeline-box hover:bg-base-300 transition-colors duration-300 p-4 rounded-lg shadow-md">
+                Completed Btech Journey
+                <span className="block text-sm text-base-content/80">in 2025</span>
+              </div>
             </div>
             <div className="timeline-middle text-accent">
-              <i className="fa-solid fa-robot"></i>
+              <i className="fa-solid fa-robot text-2xl"></i>
             </div>
-            <hr />
           </li>
         </ul>
       </div>
@@ -195,13 +215,13 @@ const AboutUs = () => {
       {/* Quote Card */}
       <div className="px-4 py-16 bg-base-100 md:px-10 lg:px-20">
         <div className="max-w-2xl mx-auto">
-          <div className="card shadow-lg bg-primary text-primary-content">
-            <div className="card-body">
-              <h2 className="card-title">Favorite Quote 💡</h2>
-              <p className="italic">
-                "Code is like humor. When you have to explain it, it's bad." –
-                Cory House
+          <div className="card shadow-lg bg-primary text-primary-content hover:shadow-xl transition-shadow duration-300">
+            <div className="card-body text-center">
+              <h2 className="card-title justify-center">Inspiration 💡</h2>
+              <p className="italic text-primary-content/90">
+               "The function of good software is to make the complex appear simple."
               </p>
+               <p className="text-sm font-semibold text-primary-content/70">– Grady Booch</p>
             </div>
           </div>
         </div>

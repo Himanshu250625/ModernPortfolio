@@ -77,7 +77,7 @@ const Comments = ({ postId }) => {
 
   return (
     <div className="space-y-8">
-      <h2 className="text-2xl font-bold text-gray-900">Comments</h2>
+      <h2 className="text-2xl font-bold text-base-content">Comments</h2>
 
       {/* Comment Form */}
       <form onSubmit={handleAddComment} className="space-y-4">
@@ -85,7 +85,7 @@ const Comments = ({ postId }) => {
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
           placeholder={replyTo ? "Write a reply..." : "Write a comment..."}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 bg-base-200 text-base-content border border-base-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           rows="3"
         />
         <div className="flex justify-between items-center">
@@ -93,14 +93,14 @@ const Comments = ({ postId }) => {
             <button
               type="button"
               onClick={() => setReplyTo(null)}
-              className="text-gray-600 hover:text-gray-800"
+              className="text-base-content/70 hover:text-base-content"
             >
               Cancel Reply
             </button>
           )}
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-primary text-primary-content rounded-lg hover:bg-primary-focus transition-colors"
           >
             {replyTo ? 'Reply' : 'Comment'}
           </button>
@@ -119,25 +119,25 @@ const Comments = ({ postId }) => {
                 className="w-10 h-10 rounded-full"
               />
               <div className="flex-1">
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-base-200 p-4 rounded-lg">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="font-semibold">{comment.author}</h3>
-                      <p className="text-sm text-gray-500">{comment.date}</p>
+                      <h3 className="font-semibold text-base-content">{comment.author}</h3>
+                      <p className="text-sm text-base-content/70">{comment.date}</p>
                     </div>
                     <button
                       onClick={() => handleLike(comment.id)}
-                      className="flex items-center gap-1 text-gray-600 hover:text-blue-600"
+                      className="flex items-center gap-1 text-base-content/70 hover:text-primary"
                     >
                       <FaThumbsUp />
                       <span>{comment.likes}</span>
                     </button>
                   </div>
-                  <p className="text-gray-700">{comment.content}</p>
+                  <p className="text-base-content/80">{comment.content}</p>
                 </div>
                 <button
                   onClick={() => setReplyTo(comment.id)}
-                  className="mt-2 flex items-center gap-1 text-gray-600 hover:text-blue-600"
+                  className="mt-2 flex items-center gap-1 text-base-content/70 hover:text-primary"
                 >
                   <FaReply />
                   Reply
@@ -156,21 +156,21 @@ const Comments = ({ postId }) => {
                       className="w-8 h-8 rounded-full"
                     />
                     <div className="flex-1">
-                      <div className="bg-gray-50 p-4 rounded-lg">
+                      <div className="bg-base-200 p-4 rounded-lg">
                         <div className="flex justify-between items-start mb-2">
                           <div>
-                            <h3 className="font-semibold">{reply.author}</h3>
-                            <p className="text-sm text-gray-500">{reply.date}</p>
+                            <h3 className="font-semibold text-base-content">{reply.author}</h3>
+                            <p className="text-sm text-base-content/70">{reply.date}</p>
                           </div>
                           <button
                             onClick={() => handleLike(reply.id, true, comment.id)}
-                            className="flex items-center gap-1 text-gray-600 hover:text-blue-600"
+                            className="flex items-center gap-1 text-base-content/70 hover:text-primary"
                           >
                             <FaThumbsUp />
                             <span>{reply.likes}</span>
                           </button>
                         </div>
-                        <p className="text-gray-700">{reply.content}</p>
+                        <p className="text-base-content/80">{reply.content}</p>
                       </div>
                     </div>
                   </div>

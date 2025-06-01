@@ -68,51 +68,51 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="py-20 px-6 text-primary min-h-screen">
+    <div className="py-20 px-6 text-base-content min-h-screen bg-base-100">
       <h2 className="text-4xl font-bold text-center mb-12 font-serif">Contact Us</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Contact Info */}
-        <div className="bg-[#1e1e2f] p-10 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
-          <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+        <div className="bg-base-200 p-10 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+          <h3 className="text-2xl font-bold mb-6 text-base-content">Get in Touch</h3>
           
           <div className="space-y-6">
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-primary text-xl" />
               <div>
-                <h4 className="font-medium">Address</h4>
-                <p className="text-gray-300">Gorakhpur, Uttar Pradesh, India</p>
+                <h4 className="font-medium text-base-content">Address</h4>
+                <p className="text-base-content/70">Gorakhpur, Uttar Pradesh, India</p>
               </div>
             </div>
             
             <div className="flex items-center gap-4">
               <FaPhone className="text-primary text-xl" />
               <div>
-                <h4 className="font-medium">Phone</h4>
-                <p className="text-gray-300">+91 9120132178</p>
+                <h4 className="font-medium text-base-content">Phone</h4>
+                <p className="text-base-content/70">+91 9120132178</p>
               </div>
             </div>
             
             <div className="flex items-center gap-4">
               <FaEnvelope className="text-primary text-xl" />
               <div>
-                <h4 className="font-medium">Email</h4>
-                <p className="text-gray-300">him979322@gmail.com</p>
+                <h4 className="font-medium text-base-content">Email</h4>
+                <p className="text-base-content/70">him979322@gmail.com</p>
               </div>
             </div>
           </div>
 
           <div className="mt-10">
-            <h4 className="font-medium mb-4">Follow Us</h4>
+            <h4 className="font-medium mb-4 text-base-content">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-ghost">
-                <FaGithub className="text-xl" />
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-ghost hover:bg-base-300">
+                <FaGithub className="text-xl text-base-content" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-ghost">
-                <FaLinkedin className="text-xl" />
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-ghost hover:bg-base-300">
+                <FaLinkedin className="text-xl text-base-content" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-ghost">
-                <FaTwitter className="text-xl" />
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-ghost hover:bg-base-300">
+                <FaTwitter className="text-xl text-base-content" />
               </a>
             </div>
           </div>
@@ -133,16 +133,16 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Form */}
-        <form onSubmit={handleSubmit} className="bg-[#1e1e2f] p-10 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+        <form onSubmit={handleSubmit} className="bg-base-200 p-10 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
           <div className="form-control mb-4">
             <label className="label">
-              <span className="label-text text-white">Name</span>
+              <span className="label-text text-base-content">Name</span>
             </label>
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              className={`input input-bordered w-full ${errors.name ? 'input-error' : ''}`}
+              className={`input input-bordered w-full bg-base-100 text-base-content ${errors.name ? 'input-error' : ''}`}
               value={formData.name}
               onChange={handleChange}
               required
@@ -152,13 +152,13 @@ const ContactUs = () => {
 
           <div className="form-control mb-4">
             <label className="label">
-              <span className="label-text text-white">Email</span>
+              <span className="label-text text-base-content">Email</span>
             </label>
             <input
               type="email"
               name="email"
               placeholder="Your Email"
-              className={`input input-bordered w-full ${errors.email ? 'input-error' : ''}`}
+              className={`input input-bordered w-full bg-base-100 text-base-content ${errors.email ? 'input-error' : ''}`}
               value={formData.email}
               onChange={handleChange}
               required
@@ -168,13 +168,13 @@ const ContactUs = () => {
 
           <div className="form-control mb-4">
             <label className="label">
-              <span className="label-text text-white">Subject</span>
+              <span className="label-text text-base-content">Subject</span>
             </label>
             <input
               type="text"
               name="subject"
               placeholder="Subject"
-              className={`input input-bordered w-full ${errors.subject ? 'input-error' : ''}`}
+              className={`input input-bordered w-full bg-base-100 text-base-content ${errors.subject ? 'input-error' : ''}`}
               value={formData.subject}
               onChange={handleChange}
               required
@@ -184,11 +184,11 @@ const ContactUs = () => {
 
           <div className="form-control mb-6">
             <label className="label">
-              <span className="label-text text-white">Message</span>
+              <span className="label-text text-base-content">Message</span>
             </label>
             <textarea
               name="message"
-              className={`textarea textarea-bordered h-32 w-full ${errors.message ? 'textarea-error' : ''}`}
+              className={`textarea textarea-bordered h-32 w-full bg-base-100 text-base-content ${errors.message ? 'textarea-error' : ''}`}
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}

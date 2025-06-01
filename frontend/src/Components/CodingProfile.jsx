@@ -25,7 +25,7 @@ const codingProfiles = [
 
 const CodingProfile = () => {
   return (
-    <div className=" py-20 px-6">
+    <div className="py-20 px-6 bg-base-100">
       <h2 className="text-4xl font-bold text-center text-primary mb-16 font-serif">
         Coding Profile
       </h2>
@@ -34,7 +34,7 @@ const CodingProfile = () => {
         {codingProfiles.map((profile, idx) => (
           <div
             key={idx}
-            className="card w-72 mx-auto bg-[#0a0a44] shadow-lg text-white border border-primary hover:shadow-primary transition duration-300 rounded-xl"
+            className="card w-72 mx-auto bg-base-200 shadow-lg text-base-content border border-primary hover:shadow-primary transition duration-300 rounded-xl"
           >
             <figure className="px-6 pt-6">
               <img
