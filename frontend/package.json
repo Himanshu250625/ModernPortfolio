@@ -25,7 +25,10 @@
     "react-icons": "^5.5.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.28.0"
+<<<<<<< HEAD
   
+=======
+>>>>>>> 21fa5d9885c1f9aa61f8f8a991e00a77ce315b16
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
